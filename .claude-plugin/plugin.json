@@ -1,0 +1,11 @@
+{
+  "name": "external-tool-security-gate",
+  "description": "Security gate for adding any external tool (skill, subagent, plugin, MCP server, or package) from an outside source. Computes a 0-100% safety score; >=96% proceeds, 80-96% asks user, <80% hard block.",
+  "version": "1.0.0",
+  "author": {
+    "name": "kevdany17",
+    "url": "https://github.com/kevdany17"
+  },
+  "license": "MIT",
+  "keywords": ["security", "supply-chain", "skill-review", "mcp", "plugin-review"]
+}
