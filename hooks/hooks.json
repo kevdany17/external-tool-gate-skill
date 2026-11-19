@@ -1,0 +1,25 @@
+{
+  "description": "Enforces the external-tool-security-gate skill before any Bash command installs or updates a dependency or Claude Code tool (skill/plugin/MCP server), and flags hand-edits to Claude Code config files that could register a new external MCP server, plugin, or hook.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/gate_check.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/config_check.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
