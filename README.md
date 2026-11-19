@@ -74,4 +74,4 @@ See [`skills/external-tool-security-gate/SKILL.md`](skills/external-tool-securit
 
 ## License
 
-Apache-2.0 — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
